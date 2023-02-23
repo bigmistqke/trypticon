@@ -40,7 +40,7 @@ result = add({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
   // {value: [{nested: 6}, 8]}
 ```
 
-options: `{strict: boolean, string: boolean}`
+options: `{strict: boolean = false, string: boolean = false}` 
 
 ```ts
 result({strict: true})({value: 1}, {value: "b"}, {value: 2})
@@ -78,7 +78,7 @@ result = multiply({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
   // {value: [{nested: 8}, 12]}
 ```
 
-options: `{strict: boolean}`
+options: `{strict: boolean = false}`
 
 ```ts
 result = multiply({strict: true})({value: 1}, {value: "b"}, {value: 2})
