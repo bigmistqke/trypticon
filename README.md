@@ -2,8 +2,6 @@
 
 utility-functions to perform arithmetical operations on data with any shape.<br/>
 
-1. 
-
 ## Quick start
 
 Install it:
@@ -80,16 +78,11 @@ result = multiply({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
   // {value: [{nested: 8}, 12]}
 ```
 
-options: `{strict: boolean, string: boolean}`
+options: `{strict: boolean}`
 
 ```ts
 result = multiply({strict: true})({value: 1}, {value: "b"}, {value: 2})
   // undefined
 result = multiply({strict: false})({value: 1}, {value: "b"}, {value: 2})
-  // {value: 3} -> will choose first 'valid' type as the correct type
-
-result = multiply({string: true})({value: "a"}, {value: "b"}, {value: "c"})
-  // {value: "abc"}
-result = multiply({string: false})({value: "a"}, {value: "b"}, {value: "c"})
-  // {value: "a"}
+  // {value: 2} -> will choose first 'valid' type as the correct type
 ```
