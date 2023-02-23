@@ -76,7 +76,7 @@ multiply({ value: [0, 1]}, 2)
 // {value: [0, 2]}
 
 multiply({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
-// {value: [{nested: 8}, 12]}
+// {value: [{nested: 6}, 16]}
 ```
 
 options: `{strict: boolean}` defaults to `{strict: false}` 
