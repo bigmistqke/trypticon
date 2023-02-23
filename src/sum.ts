@@ -1,21 +1,21 @@
 import operate, { Callback } from "./operate";
 import { AcceptedTypes } from "./types";
 
-const options = ["strict", "string"] as const;
+const sumOptions = ["strict", "string"] as const;
 
-type Options = {
-  [K in (typeof options)[number]]?: boolean;
+type SumOptions = {
+  [K in (typeof sumOptions)[number]]?: boolean;
 };
 
 const validateOptions = (value: unknown) => {
   if (typeof value !== "object") return false;
   for (const key in value) {
-    if (!options.includes(key as any)) return false;
+    if (!sumOptions.includes(key as any)) return false;
   }
-  return value as Options;
+  return value as SumOptions;
 };
 
-const defaultOptions: Options = {
+const defaultOptions: SumOptions = {
   strict: true,
   string: false,
 };
@@ -35,7 +35,7 @@ const callback: Callback = (accumulator, value, index, options) => {
 };
 
 function sum<T extends AcceptedTypes>(
-  options: Options
+  options: SumOptions
 ): (a: T | number, b: T | number, ...values: (T | number)[]) => void;
 function sum<T extends AcceptedTypes>(
   a: T | number,
@@ -43,7 +43,7 @@ function sum<T extends AcceptedTypes>(
   ...values: (T | number)[]
 ): T;
 function sum<T extends AcceptedTypes>(
-  first: Options | (T | number),
+  first: SumOptions | (T | number),
   ...values: (T | number)[]
 ) {
   try {

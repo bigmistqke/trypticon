@@ -1,13 +1,13 @@
 import operate, { Callback } from "./operate";
 import { AcceptedTypes } from "./types";
 
-const options = ["strict"] as const;
+const multiplyOptions = ["strict"] as const;
 
-type Options = {
-  [K in (typeof options)[number]]: boolean;
+type MultiplyOptions = {
+  [K in (typeof multiplyOptions)[number]]: boolean;
 };
 
-const defaultOptions: Options = {
+const defaultOptions: MultiplyOptions = {
   strict: true,
 };
 
@@ -18,7 +18,7 @@ const validateOptions = (value: any) => {
   for (key in value) {
     if (!validKeys.includes(key)) return false;
   }
-  return value as Options;
+  return value as MultiplyOptions;
 };
 
 const callback: Callback = (accumulator, value, index, options) => {
@@ -32,7 +32,7 @@ const callback: Callback = (accumulator, value, index, options) => {
 };
 
 function multiply<T extends AcceptedTypes>(
-  options: Options
+  options: MultiplyOptions
 ): (a: T | number, b: T | number, ...values: (T | number)[]) => T;
 function multiply<T extends AcceptedTypes>(
   a: T | number,
@@ -40,7 +40,7 @@ function multiply<T extends AcceptedTypes>(
   ...values: (T | number)[]
 ): T;
 function multiply<T extends AcceptedTypes>(
-  first: Options | (T | number),
+  first: MultiplyOptions | (T | number),
   ...values: (T | number)[]
 ) {
   try {
