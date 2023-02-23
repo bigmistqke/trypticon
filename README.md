@@ -47,7 +47,7 @@ add({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
 add({strict: true})({value: 1}, {value: "b"}, {value: 2})
 // undefined
 add({strict: false})({value: 1}, {value: "b"}, {value: 2})
-// {value: 3} -> will choose first 'valid' type as the correct type
+// {value: 3} -> will choose first valid type as the 'correct' type
 
 add({string: true})({value: "a"}, {value: "b"}, {value: "c"})
 // {value: "abc"}
@@ -85,7 +85,7 @@ options: `{strict: boolean}` defaults to `{strict: false}`
 multiply({strict: true})({value: 1}, {value: "b"}, {value: 2})
   // undefined
 multiply({strict: false})({value: 1}, {value: "b"}, {value: 2})
-  // {value: 2} -> will choose first 'valid' type as the correct type
+  // {value: 2} -> will choose first valid type as the 'correct' type
 ```
 
 ## TODO:
