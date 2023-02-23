@@ -17,7 +17,7 @@ pnpm add trypticon
 
 Use it:
 
-- addition
+### addition
 
 ```ts
 import { add } from 'trypticon'
@@ -55,7 +55,7 @@ add({string: false})({value: "a"}, {value: "b"}, {value: "c"})
 // {value: "a"}
 ```
 
-- multiplication
+### multiplication
 
 ```ts
 import { multiply } from 'trypticon'
@@ -98,12 +98,13 @@ multiply({string: false})({value: "a"}, {value: "b"}, {value: "c"})
 ```
 
 ## TODO:
-
-- [x] add
-- [x] multiply
-- [ ] subtract
-- [ ] divide
-- [ ] power
-- [ ] root
-- [ ] operate (reducer)
-- [ ] lerp
+- arithmetic
+  - [x] addition
+  - [x] multiplaction
+  - [ ] subtraction
+  - [ ] division
+  - [ ] power
+  - [ ] root
+- misc
+  - [ ] operate (reducer)
+  - [ ] lerp
