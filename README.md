@@ -1,7 +1,7 @@
 # 🦖 [trypticon](https://tfwiki.net/mediawiki/images2/4/4f/TrypticonGenerations1.jpg)
 
-utility-functions to perform arithmetical operations on data with any shape.<br/>
-transform 1 object typesafe into the other.
+utility-functions to perform arithmetical operations on data with any shape:<br/>
+transform 1 object into the other
 
 ## Quick start
 
@@ -96,3 +96,10 @@ multiply({string: true})({value: "a"}, {value: "b"}, {value: "c"})
 multiply({string: false})({value: "a"}, {value: "b"}, {value: "c"})
 // {value: "a"}
 ```
+
+## TODO:
+- [ ] subtract
+- [ ] divide
+- [ ] power
+- [ ] root
+- [ ] lerp
