@@ -98,8 +98,12 @@ multiply({string: false})({value: "a"}, {value: "b"}, {value: "c"})
 ```
 
 ## TODO:
+
+- [x] add
+- [x] multiply
 - [ ] subtract
 - [ ] divide
 - [ ] power
 - [ ] root
+- [ ] operate (reducer)
 - [ ] lerp
