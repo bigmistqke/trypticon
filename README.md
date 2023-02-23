@@ -1,6 +1,7 @@
-# 🦖 [trypticon](https://tfwiki.net/mediawiki/images2/4/4f/TrypticonGenerations1.jpg)
+# 🦖 trypticon
 
-Transform 1 object into the other with 🦖 trypticon:<br/>
+Transform 1 object into the other with [trypticon](https://tfwiki.net/mediawiki/images2/4/4f/TrypticonGenerations1.jpg)
+:<br/>
 A set of utility-functions to perform arithmetical operations on data with any shape.
 
 ## Quick start
