@@ -82,19 +82,10 @@ multiply({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
 options: `{strict: boolean}` defaults to `{strict: false}` 
 
 ```ts
-result = multiply({strict: true})({value: 1}, {value: "b"}, {value: 2})
-  // undefined
-result = multiply({strict: false})({value: 1}, {value: "b"}, {value: 2})
-  // {value: 2} -> will choose first 'valid' type as the correct type
 multiply({strict: true})({value: 1}, {value: "b"}, {value: 2})
-// undefined
+  // undefined
 multiply({strict: false})({value: 1}, {value: "b"}, {value: 2})
-// {value: 3} -> will choose first 'valid' type as the correct type
-
-multiply({string: true})({value: "a"}, {value: "b"}, {value: "c"})
-// {value: "abc"}
-multiply({string: false})({value: "a"}, {value: "b"}, {value: "c"})
-// {value: "a"}
+  // {value: 2} -> will choose first 'valid' type as the correct type
 ```
 
 ## TODO:
