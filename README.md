@@ -1,8 +1,7 @@
 # 🦖 [trypticon](https://tfwiki.net/mediawiki/images2/4/4f/TrypticonGenerations1.jpg)
 
 utility-functions to perform arithmetical operations on data with any shape.<br/>
-
-1. 
+transform 1 object typesafe into the other.
 
 ## Quick start
 
@@ -42,7 +41,7 @@ add({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
 // {value: [{nested: 6}, 8]}
 ```
 
-options: `{strict: boolean, string: boolean}`
+options: `{strict: boolean = false, string: boolean = false}` 
 
 ```ts
 add({strict: true})({value: 1}, {value: "b"}, {value: 2})
@@ -80,9 +79,13 @@ multiply({ value: [{nested: 1}, 2]}, { value: [{nested: 3}, 4]}, 2)
 // {value: [{nested: 8}, 12]}
 ```
 
-options: `{strict: boolean, string: boolean}`
+options: `{strict: boolean = false}`
 
 ```ts
+result = multiply({strict: true})({value: 1}, {value: "b"}, {value: 2})
+  // undefined
+result = multiply({strict: false})({value: 1}, {value: "b"}, {value: 2})
+  // {value: 2} -> will choose first 'valid' type as the correct type
 multiply({strict: true})({value: 1}, {value: "b"}, {value: 2})
 // undefined
 multiply({strict: false})({value: 1}, {value: "b"}, {value: 2})
