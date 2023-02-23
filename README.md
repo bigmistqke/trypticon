@@ -1,6 +1,7 @@
 # 🦖 [trypticon](https://tfwiki.net/mediawiki/images2/4/4f/TrypticonGenerations1.jpg)
 
 utility-functions to perform arithmetical operations on data with any shape.<br/>
+transform 1 object typesafe into the other.
 
 ## Quick start
 
